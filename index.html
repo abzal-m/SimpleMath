@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-layout">
+      <div class="settings-container">
+        <h3>Настройки игры</h3>
+        <label
+          >Макс. ошибок:
+          <input type="number" id="mistakes-limit" min="1" max="20" value="3" />
+        </label>
+        <label
+          >Нужных правильных:
+          <input type="number" id="correct-target" min="1" max="50" value="20" />
+        </label>
+        <button id="start-game">Начать игру</button>
+      </div>
+      <div class="game-container">
+        <h2>Мини-игра: Арифметика</h2>
+        <div class="mode-switch">
+          <button class="mode-btn" data-mode="plusminus" id="btn-plusminus">
+            Сложение/Вычитание
+          </button>
+          <button class="mode-btn" data-mode="multiply" id="btn-multiply">
+            Таблица умножения
+          </button>
+          <button class="mode-btn" data-mode="mixed" id="btn-mixed">
+            В перемешку
+          </button>
+        </div>
+        <div id="question"></div>
+        <div id="visualization"></div>
+        <input type="number" id="answer" placeholder="Ваш ответ" />
+        <button id="submit">Ответить</button>
+        <div class="scoreboard">
+          <span>Верно: <span id="correct">0</span></span>
+          <span>Ошибки: <span id="mistakes">0</span></span>
+        </div>
+        <button id="next" style="display: none">Далее</button>
+        <div id="feedback"></div>
+      </div>
+      <div class="history-container">
+        <h3>Решённые задачи</h3>
+        <div id="history-list"></div>
+      </div>
+    </div>
+  </body>
+</html>

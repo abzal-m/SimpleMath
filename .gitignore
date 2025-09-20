@@ -1,0 +1,13 @@
+# Node, Python etc not needed — keep common
+*.log
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# OS
+desktop.ini
+
+# Ignore OneDrive temp files
+~$*
