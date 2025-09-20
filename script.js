@@ -31,13 +31,13 @@ function generateQuestion() {
     const type = getRandomInt(1, 3); // 1: +, 2: -, 3: ×
     if (type === 1) {
       op = "+";
-      a = getRandomInt(10, 90);
-      b = getRandomInt(10, 90);
+      a = getRandomInt(1, 90);
+      b = getRandomInt(1, 90);
       currentAnswer = a + b;
     } else if (type === 2) {
       op = "-";
-      a = getRandomInt(10, 90);
-      b = getRandomInt(10, 90);
+      a = getRandomInt(1, 90);
+      b = getRandomInt(1, 90);
       if (b > a) [a, b] = [b, a];
       currentAnswer = a - b;
     } else {
