@@ -58,22 +58,7 @@ function generateQuestion() {
   const vis = document.getElementById("visualization");
   vis.innerHTML = "";
   if (mode === "multiply" || (mode === "mixed" && op === "×")) {
-    // Визуализация ответа: количество фигур = ответ
-    const createAnswerVisual = (num) => {
-      const container = document.createElement("div");
-      container.style.display = "flex";
-      container.style.flexWrap = "wrap";
-      container.style.justifyContent = "center";
-      for (let i = 0; i < num; i++) {
-        const circle = document.createElement("span");
-        circle.className = "circle";
-        circle.style.background = "#ab47bc";
-        container.appendChild(circle);
-      }
-      return container;
-    };
-    vis.appendChild(createAnswerVisual(currentAnswer));
-    // Показываем сам пример
+    // Для умножения: не рисуем много фигур, показываем только текст примера
     const example = document.createElement("div");
     example.style.textAlign = "center";
     example.style.marginTop = "12px";
