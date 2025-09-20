@@ -22,8 +22,8 @@ function generateQuestion() {
     currentAnswer = a * b;
   } else if (mode === "plusminus") {
     op = Math.random() < 0.5 ? "+" : "-";
-    a = getRandomInt(10, 90);
-    b = getRandomInt(10, 90);
+    a = getRandomInt(1, 90);
+    b = getRandomInt(1, 90);
     if (op === "-" && b > a) [a, b] = [b, a];
     currentAnswer = op === "+" ? a + b : a - b;
   } else if (mode === "mixed") {
